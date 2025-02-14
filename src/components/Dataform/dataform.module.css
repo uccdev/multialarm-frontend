@@ -1,0 +1,220 @@
+:root {
+    --base-red: #df3d21;
+    --base-lightgray: rgba(235, 235, 236);
+    --base-darkgray: #999;
+
+    /*USAGE: var(--base-red); */
+}
+
+.redtext {
+    color: var(--base-red);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    /* background: linear-gradient(281deg, #100033 0%, #E20074 100%); */
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.innerContainer {
+    min-width: 400px;
+    border-radius: 0px;
+    background: #fff;
+    border: 2px solid #f0f0f5;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.innerContainer .form {
+    width: 100%;
+    height: 100%;
+    padding: 15px 25px 35px 25px;
+}
+
+.innerContainer .form h2 {
+    color: var(--base-red);
+    background-clip: text;
+    text-align: center;
+    font-size: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.innerContainer .form h3 {
+    color: var(--base-darkgray);
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/* .customDropdown {
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    background: rgb(255, 255, 255);
+    padding-left: 10px;
+    border-radius: 5px;
+    color: #18214d;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 10px;
+    border: 1px solid var(--base-darkgray);
+    overflow: auto;
+}
+
+.customDropdown:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3) !important;
+    border: 2px solid var(--base-red);
+}
+
+.customDropdown option {
+    color: whitesmoke !important;
+    background: var(--base-red) !important;
+    border-radius: 5px !important;
+    border: 1px solid var(--base-red) !important;
+}
+
+.customDropdown :disabled {
+    background-color: #18214d !important;
+    font-weight: 600;
+    font-style: italic;
+} */
+
+.innerContainer .form input {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    background: #fff;
+    border: 3px solid var(--base-red);
+    padding: 0 15px;
+    color: #333;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 30px;
+    padding-top: 2px;
+}
+
+.innerContainer .form input:focus {
+    border: 3px solid #d8d8df;
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: #AAA;
+}
+
+.innerContainer .form input.submit {
+    width: 100%;
+    font-size: 16px;
+    margin-top: 40px;
+    height: 50px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-color: var(--base-red);
+    color: #fff;
+    border-radius: 0px;
+    border: 2px solid var(--base-red);
+    padding: 0;
+    /*box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);*/
+}
+
+/* .innerContainer .form input.submit:hover {
+    background-position: right center;
+    background-color: #fff;
+    text-decoration: none;
+    border: 2px solid var(--base-red);
+    color: var(--base-red);
+} */
+
+.innerContainer .form input.submit:hover {
+    background-color: #f55235;
+}
+
+.addressSelect{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    background: #fff;
+    border: 3px solid var(--base-red);
+    padding: 0 15px;
+    color: #333 ;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 30px;
+    padding-top: 2px;
+}
+
+.responsive {
+    display: flex;
+}
+
+.inputDisabled {
+    background-color: var(--base-lightgray) !important;
+}
+
+label {
+    position: absolute;
+    margin-top: 12px;
+    margin-left: 25px;
+    padding-left: 8px;
+    padding-right: 8px;
+    background-color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    color: #000;
+}
+
+.iconpw {
+    background: url('pwicon.png') no-repeat center center;
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    margin-left: 8px;
+    margin-top: 35px;
+}
+.iconphone {
+    background: url('phoneicon.png') no-repeat center center;
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    margin-left: 8px;
+    margin-top: 35px;
+}
+.iconaddress {
+    background: url('addressicon.png') no-repeat center center;
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+    margin-left: 8px;
+    margin-top: 35px;
+}
+
+.languagechange{
+    border: none;
+    text-align: end;
+    color: #999;
+    font-size: 10px;
+}
+
+@media screen and (max-width:430px) {
+    .innerContainer {
+        min-width: 90vw;
+    }
+}
+

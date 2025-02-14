@@ -1,0 +1,43 @@
+:root{
+    --base-red: #df3d21;
+    --base-lightgray: rgba(235, 235, 236);
+    --base-darkgray: #999;
+
+    /*USAGE: var(--base-red); */
+}
+
+.redtext{
+    color: var(--base-red);
+}
+
+.h1 {
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: var(--base-red);
+    text-align: center;
+    margin: 50px 10px 30px 10px;
+}
+
+.h3 {
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: var(--base-darkgray);
+    text-align: center;
+}
+
+.container {
+    min-width: 400px;
+    border-radius: 5px;
+    background: #fff;
+    border: 2px solid #f0f0f5;
+    padding-bottom: 50px;
+    margin: 0;
+  }
+
+@media screen and (max-width:430px) {
+    .container{
+        min-width: 90vw;
+    }
+}
