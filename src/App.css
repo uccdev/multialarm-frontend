@@ -29,3 +29,33 @@ body {
     justify-content: center;
     min-width: 100vw;
 }
+
+.toprow{
+    width: 500px !important;
+    position: absolute !important;
+    z-index: 10 !important;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media screen and (max-width:900px) {
+    .toprow{
+        width: 100% !important;
+        top: 20%;
+    }
+}
+
+
+@media screen and (max-width:700px) {
+    .toprow{
+        top: 15%;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .toprow{
+        top: 10%;
+    }
+}
+

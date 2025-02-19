@@ -24,6 +24,7 @@ body {
 
 .innerContainer {
     min-width: 400px;
+    max-width: 400px;
     border-radius: 0px;
     background: #fff;
     border: 2px solid #f0f0f5;
@@ -215,6 +216,7 @@ label {
 @media screen and (max-width:430px) {
     .innerContainer {
         min-width: 90vw;
+        max-width: 90vw;
     }
 }
 
