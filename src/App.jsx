@@ -26,6 +26,7 @@ function App() {
                 setHash(token);
 
                 if (!token){
+                    setModal('error');
                     throw new Error('Invalid token');
                 }
 
@@ -37,11 +38,15 @@ function App() {
                     body: JSON.stringify({ token })
                 });
 
+                if (!response.ok){
+                    setModal('error');
+                    throw new Error('Failed to fetch data');
+                }
+
                 const result = await response.json();
 
                 if (!result || Object.keys(result).length === 0){
-                    setErrorMsg('Nem sikerült csatlakozni a szerverhez. Kérem próbálja újra később vagy ellenőrizze a link végén található kódot.')
-                    setShowAlert('true');
+                    setModal('error')
                     throw new Error('No data found');
                 }
 
@@ -70,7 +75,7 @@ function App() {
 
     const handleSubmit = async (formData) => {
         setModal('loading');
-        //console.table(formData);
+        console.table(formData);
 
         if (!formData.password){
             setErrorMsg('A jelszó megadása kötelező!')

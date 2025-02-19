@@ -41,7 +41,7 @@ body {
 
 @media screen and (max-width:900px) {
     .toprow{
-        width: 100% !important;
+        width: 90% !important;
         top: 20%;
     }
 }

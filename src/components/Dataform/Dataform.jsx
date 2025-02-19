@@ -30,18 +30,32 @@ export default function Dataform({ data = {}, onSubmit , hash}) {
         }));
     };
 
+    const handleAddressChange = (e) => {
+        const newAddress = e.target.value;
+        setSelectedAddress(newAddress);
+
+        // Find the matching address in the data array and update intAccId & personId
+        const selectedAlarm = data.find(item => item.address === newAddress);
+        if (selectedAlarm) {
+            setFormData((prevState) => ({
+                ...prevState,
+                intAccId: selectedAlarm.int_acc_id,
+                personId: selectedAlarm.person_id,
+            }));
+        }
+    };
 
     return (
         <>
             <div className={style.innerContainer}>
                 <div className={style.form}>
-                    <div className='d-flex justify-content-between'>
+                    <div className='text-start'>
                         <h3>Riasztás lemondása</h3>
-                        <select name="language" id="language" className={style.languagechange}>
+ {/*                        <select name="language" id="language" className={style.languagechange}>
                             <option value="hu">HU</option>
-{/*                             <option value="en">EN</option>
-                            <option value="ger">GER</option> */}
-                        </select>
+                            <option value="en">EN</option>
+                            <option value="ger">GER</option>
+                        </select>*/}
                     </div>
 
                     <form onSubmit={(e) => { e.preventDefault(); onSubmit(formData); }}>
@@ -61,7 +75,7 @@ export default function Dataform({ data = {}, onSubmit , hash}) {
                         <div className={style.responsive}>
                             <label htmlFor='address'>Kérjük, válassza ki az érintett ingatlant</label>
                             <div className={style.iconaddress} />
-                            <select name="address" id="address" className={style.addressSelect} value={selectedAddress} onChange={(e) => setSelectedAddress(e.target.value)}>
+                            <select name="address" id="address" className={style.addressSelect} value={selectedAddress} onChange={handleAddressChange}>
                                 {Array.isArray(data) && data.length > 0 ? (
                                     data.map((item, index) => (
                                         <option key={index} value={item.address}>
