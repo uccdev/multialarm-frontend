@@ -75,7 +75,7 @@ function App() {
 
     const handleSubmit = async (formData) => {
         setModal('loading');
-        console.table(formData);
+        //console.table(formData);
 
         if (!formData.password){
             setErrorMsg('A jelszó megadása kötelező!')

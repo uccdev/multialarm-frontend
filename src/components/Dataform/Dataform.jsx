@@ -9,6 +9,8 @@ export default function Dataform({ data = {}, onSubmit , hash}) {
         intAccId: '',
         personId: '',
         password: '',
+        event_id:'',
+        cluster_id: '',
     });
 
     useEffect(() => {
@@ -17,6 +19,8 @@ export default function Dataform({ data = {}, onSubmit , hash}) {
                 ...prevState,
                 intAccId: data[0].int_acc_id || '',
                 personId: data[0].person_id || '',
+                event_id: data[0].event_id || '',
+                cluster_id: data[0].cluster_id || '',
             }));
             setSelectedAddress(data[0].address || '');
         }
@@ -41,6 +45,8 @@ export default function Dataform({ data = {}, onSubmit , hash}) {
                 ...prevState,
                 intAccId: selectedAlarm.int_acc_id,
                 personId: selectedAlarm.person_id,
+                event_id: selectedAlarm.event_id,
+                cluster_id: selectedAlarm.cluster_id,
             }));
         }
     };
