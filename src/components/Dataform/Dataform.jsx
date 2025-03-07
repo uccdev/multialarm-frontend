@@ -12,6 +12,7 @@ export default function Dataform({ data = {}, onSubmit , hash}) {
         event_id:'',
         cluster_id: '',
         int_part_id: '',
+        internal_event: '',
     });
 
     useEffect(() => {
@@ -23,6 +24,7 @@ export default function Dataform({ data = {}, onSubmit , hash}) {
                 event_id: data[0].event_id || '',
                 cluster_id: data[0].cluster_id || '',
                 int_part_id: data[0].int_part_id ||'',
+                internal_event: data[0].internal_event || '',
             }));
             setSelectedAddress(data[0].address || '');
         }
@@ -50,6 +52,7 @@ export default function Dataform({ data = {}, onSubmit , hash}) {
                 event_id: selectedAlarm.event_id,
                 cluster_id: selectedAlarm.cluster_id,
                 int_part_id: selectedAlarm.int_part_id,
+                internal_event: selectedAlarm.internal_event,
             }));
         }
     };
