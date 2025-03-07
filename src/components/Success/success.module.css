@@ -1,4 +1,4 @@
-:root{
+:root {
     --base-red: #df3d21;
     --base-lightgray: rgba(235, 235, 236);
     --base-darkgray: #999;
@@ -6,7 +6,7 @@
     /*USAGE: var(--base-red); */
 }
 
-.redtext{
+.redtext {
     color: var(--base-red);
 }
 
@@ -34,10 +34,30 @@
     border: 2px solid #f0f0f5;
     padding-bottom: 50px;
     margin: 0;
-  }
+}
+
+.submit {
+    width: 220px;
+    font-size: 18px;
+    margin-top: 40px;
+    height: 50px;
+    font-weight: bold;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-color: var(--base-red);
+    color: #fff;
+    border-radius: 0px;
+    border: 2px solid var(--base-red);
+    padding: 0;
+}
+
+.submit:hover {
+    background-color: #f55235;
+}
 
 @media screen and (max-width:430px) {
-    .container{
+    .container {
         min-width: 90vw;
     }
 }
